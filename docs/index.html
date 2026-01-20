@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>SAP Multi-Agent PoC</title>
+    <script defer src="static/app.js"></script>
+    <style>
+        body {
+            font-family: system-ui, Arial;
+            max-width: 900px;
+            margin: 24px auto;
+            padding: 0 12px;
+        }
+
+        #chat {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 12px;
+            min-height: 360px;
+        }
+
+        .msg {
+            margin: 10px 0;
+        }
+
+        .role {
+            font-weight: 700;
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 90px;
+        }
+
+        button {
+            padding: 10px 14px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+
+        .row {
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+            margin-top: 10px;
+        }
+
+        .grow {
+            flex: 1;
+        }
+
+        details {
+            margin-top: 12px;
+        }
+
+        pre {
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>SAP Multi-Agent PoC</h1>
+    <p>Router → (Tech/Finance/Logistics) → QA gate → Writer → svar.</p>
+
+    <div id="chat"></div>
+
+    <div class="row">
+        <div class="grow">
+            <textarea id="input" placeholder="Skriv dit SAP-spørgsmål..."></textarea>
+            <div class="row">
+                <button id="send">Send</button>
+                <button id="clear">Ryd</button>
+            </div>
+        </div>
+    </div>
+
+    <details>
+        <summary>Debug</summary>
+        <pre id="debug"></pre>
+    </details>
+</body>
+
+</html>
